@@ -1,0 +1,14 @@
+@charset "UTF-8";
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body>main {
+    -ms-overflow-x: hidden;
+}
+
+@supports (-ms-ime-align: auto) {
+    body>main {
+        overflow: hidden;
+    }
+}
