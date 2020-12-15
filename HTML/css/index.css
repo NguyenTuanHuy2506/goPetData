@@ -3,66 +3,57 @@ body {
   height: 1080px;
   display: block;
   border: 1px solid black;
-  padding: 40px;
-}
+  position: relative; }
 
 .nav {
   width: 100%;
-  height: 8rem;
   display: block;
-}
-.nav .pet {
-  width: 100%;
-}
-.pet {
-  display: flex;
-}
-.pet-avatar {
-  width: 128px;
-  height: 128px;
-  border: 1px solid black;
-  border-radius: 1.2rem;
-}
-.pet-info {
-  margin-left: 1.2rem;
-}
-.pet-info__name {
-  font-size: 3rem;
-  letter-spacing: 0.3rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.8);
-}
-.pet-info__hp, .pet-info__mp {
-  width: 32rem;
-  height: 3.2rem;
-  border-radius: 1rem;
-  margin-top: 1.2rem;
-  text-align: center;
   position: relative;
-}
-.pet-info__hp::after, .pet-info__mp::after {
-  content: "";
-  width: 30rem;
-  height: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  display: block;
-  position: absolute;
-  top: 0.3rem;
-  left: 1rem;
-  border-radius: 0.3rem;
-}
-.pet-info__hp span, .pet-info__mp span {
-  color: #fff;
-  font-size: 2.7rem;
-  letter-spacing: 0.3rem;
-  font-weight: 700;
-}
-.pet-info__hp {
-  background-color: var(--red);
-}
-.pet-info__mp {
-  background-color: var(--blue);
-}
+  padding: 4.2rem; }
+  .nav .pet {
+    width: 100%; }
+
+.pet {
+  display: flex; }
+  .pet-avatar {
+    width: 128px;
+    height: 128px;
+    border: 1px solid black;
+    border-radius: 1.2rem; }
+  .pet-info {
+    margin-left: 1.2rem; }
+    .pet-info__name {
+      font-size: 3rem;
+      letter-spacing: .3rem;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.8); }
+    .pet-info__hp, .pet-info__mp {
+      width: 32rem;
+      height: 3.2rem;
+      border-radius: 1rem;
+      margin-top: 1.2rem;
+      text-align: center;
+      position: relative;
+      border: 0.3rem solid rgba(0, 0, 0, 0.6); }
+      .pet-info__hp::after, .pet-info__mp::after {
+        content: '';
+        width: 30rem;
+        height: 1.2rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: block;
+        position: absolute;
+        top: 0.3rem;
+        left: 1rem;
+        border-radius: .3rem; }
+      .pet-info__hp span, .pet-info__mp span {
+        color: #fff;
+        font-size: 2.7rem;
+        letter-spacing: .3rem;
+        font-weight: 700; }
+    .pet-info__hp {
+      background-color: var(--red); }
+    .pet-info__mp {
+      background-color: var(--blue); }
 
 .currency__basic {
   width: 40rem;
@@ -73,89 +64,196 @@ body {
   margin-top: 4.8rem;
   border: 0.6rem solid rgba(0, 0, 0, 0.2);
   border-radius: 1.2rem;
-  position: relative;
-}
-.currency__basic .icon {
+  position: relative; }
+  .currency__basic .icon {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 1.2rem;
+    border: 1px solid black;
+    background-color: #fff;
+    transform: translateY(-1.2rem);
+    position: relative; }
+    .currency__basic .icon::after {
+      content: 'Gold';
+      font-size: 2.7rem;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 700;
+      display: block;
+      position: absolute;
+      top: -.3rem;
+      left: calc(100% + 1.2rem); }
+  .currency__basic span {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    margin-left: auto;
+    font-weight: 700; }
+  .currency__basic .add {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1.2rem;
+    border: 0.6rem solid rgba(0, 0, 0, 0.6);
+    background-color: var(--green);
+    margin-left: 1.2rem;
+    position: relative;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: relative; }
+    .currency__basic .add::after {
+      content: '';
+      width: 3.9rem;
+      height: 1.2rem;
+      background-color: rgba(255, 255, 255, 0.4);
+      display: block;
+      position: absolute;
+      top: .3rem;
+      left: .4rem;
+      border-radius: .3rem; }
+    .currency__basic .add:hover span {
+      transform: translate(-50%, -50%) rotate(180deg); }
+    .currency__basic .add span {
+      position: absolute;
+      width: 3rem;
+      height: .9rem;
+      background-color: #fff;
+      display: block;
+      border-radius: .3rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .5s ease; }
+      .currency__basic .add span::after {
+        content: '';
+        position: absolute;
+        width: 3rem;
+        height: .9rem;
+        background-color: #fff;
+        display: block;
+        border-radius: .3rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg); }
+  .currency__basic.diamond {
+    background-color: var(--blue); }
+    .currency__basic.diamond .icon::after {
+      content: 'Diamond'; }
+
+.board {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+  .board .menu-list {
+    position: absolute;
+    top: 4.2rem;
+    right: 4.2rem; }
+  .board .joy-stick {
+    position: absolute;
+    bottom: 4.2rem;
+    left: 4.2rem; }
+  .board .joy-skill {
+    position: absolute;
+    bottom: 4.2rem;
+    right: 4.2rem; }
+
+.menu-list {
+  display: flex;
+  justify-content: flex-end; }
+  .menu-list .sound,
+  .menu-list .menu {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 1.2rem;
+    border: 0.3rem solid rgba(0, 0, 0, 0.4);
+    position: relative;
+    margin-left: 3rem;
+    cursor: pointer; }
+    .menu-list .sound::after,
+    .menu-list .menu::after {
+      content: 'Sound';
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 2.7rem;
+      white-space: nowrap;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(120%);
+      font-weight: 700; }
+  .menu-list .drop-menu {
+    position: relative; }
+    .menu-list .drop-menu .menu::after {
+      content: 'Menu'; }
+    .menu-list .drop-menu .sub-menu {
+      min-width: 42rem;
+      position: absolute;
+      top: 14rem;
+      right: 0;
+      padding: 1.2rem;
+      background-color: #eeeeee;
+      border: 0.3rem solid rgba(0, 0, 0, 0.4);
+      border-radius: 1.2rem;
+      overflow: hidden;
+      transform-origin: top right;
+      transform: scale(0, 0);
+      transition: all .5s ease; }
+      .menu-list .drop-menu .sub-menu.active {
+        transform: scale(1, 1); }
+      .menu-list .drop-menu .sub-menu ul {
+        display: flex;
+        flex-direction: column; }
+        .menu-list .drop-menu .sub-menu ul li {
+          font-size: 2.8rem;
+          color: rgba(0, 0, 0, 0.6);
+          text-align: right;
+          padding: 1.2rem;
+          white-space: nowrap;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all .5s ease;
+          border-radius: .9rem;
+          margin: 1rem 0; }
+          .menu-list .drop-menu .sub-menu ul li:hover {
+            background-color: rgba(0, 0, 0, 0.2); }
+
+.joy-stick .outside {
+  width: 36rem;
+  height: 36rem;
+  border: 0.6rem solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  position: relative; }
+  .joy-stick .outside .inside {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.joy-skill .outside {
+  width: 15rem;
+  height: 15rem;
+  border: 0.6rem solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  position: absolute; }
+  .joy-skill .outside.out1 {
+    bottom: 0;
+    right: 27rem; }
+  .joy-skill .outside.out2 {
+    bottom: 15rem;
+    right: 15rem; }
+  .joy-skill .outside.out3 {
+    bottom: 27rem;
+    right: 0; }
+.joy-skill .heal {
   width: 9rem;
   height: 9rem;
-  border-radius: 1.2rem;
-  border: 1px solid black;
-  background-color: #fff;
-  transform: translateY(-1.2rem);
-  position: relative;
-}
-.currency__basic .icon::after {
-  content: "Gold";
-  font-size: 2.7rem;
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-  display: block;
-  position: absolute;
-  top: -0.3rem;
-  left: calc(100% + 1.2rem);
-}
-.currency__basic span {
-  color: #fff;
-  font-size: 3rem;
-  letter-spacing: 0.2rem;
-  margin-left: auto;
-  font-weight: 700;
-}
-.currency__basic .add {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 1.2rem;
   border: 0.6rem solid rgba(0, 0, 0, 0.6);
-  background-color: var(--green);
-  margin-left: 1.2rem;
-  position: relative;
-  transition: all 0.5s ease;
-  cursor: pointer;
-  position: relative;
-}
-.currency__basic .add::after {
-  content: "";
-  width: 3.9rem;
-  height: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  display: block;
+  border-radius: 50%;
   position: absolute;
-  top: 0.3rem;
-  left: 0.4rem;
-  border-radius: 0.3rem;
-}
-.currency__basic .add:hover span {
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-.currency__basic .add span {
-  position: absolute;
-  width: 3rem;
-  height: 0.9rem;
-  background-color: #fff;
-  display: block;
-  border-radius: 0.3rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
-}
-.currency__basic .add span::after {
-  content: "";
-  position: absolute;
-  width: 3rem;
-  height: 0.9rem;
-  background-color: #fff;
-  display: block;
-  border-radius: 0.3rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-.currency__basic.diamond {
-  background-color: var(--blue);
-}
-.currency__basic.diamond .icon::after {
-  content: "Diamond";
-}
+  bottom: 6rem;
+  right: 6rem; }
 
 /*# sourceMappingURL=index.css.map */
